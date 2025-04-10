@@ -4,8 +4,6 @@ package main.java;
 import java.io.*;
 import java.net.*;
 
-import javax.imageio.IIOException;
-import javax.print.attribute.standard.Severity;
 
 
 public class Server extends Thread {
@@ -15,7 +13,7 @@ public class Server extends Thread {
 
     public static void main(String[] args) throws ClassNotFoundException, IOException {
         // creating the socket server object 
-           ServerSocket serverSocket = new ServerSocket(port);
+          serverSocket = new ServerSocket(port);
            boolean isClientConnecting = true;
 
            while(isClientConnecting){
@@ -41,7 +39,7 @@ public class Server extends Thread {
               }catch(IOException e){
                   e.printStackTrace();
                   break;
-                  
+
 
               }finally{
                   System.out.println("Say hi!!!!");
